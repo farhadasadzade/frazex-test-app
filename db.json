@@ -4,7 +4,15 @@
             "id": 1,
             "userId": 1,
             "userName": "angel",
-            "userEmail": "angel@gmail.com"
+            "userEmail": "angel@gmail.com",
+            "posts": [
+                {
+                    "id": 1,
+                    "postId": 1,
+                    "postTitle": "aaa",
+                    "postBody": "bbbbb"
+                }
+            ]
         },
         {
             "id": 2,
