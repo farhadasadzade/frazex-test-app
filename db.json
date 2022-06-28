@@ -1,0 +1,76 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "userId": 1,
+            "userName": "angel",
+            "userEmail": "angel@gmail.com"
+        },
+        {
+            "id": 2,
+            "userId": 2,
+            "userName": "shimmer",
+            "userEmail": "shimmer@gmail.com"
+        },
+        {
+            "id": 3,
+            "userId": 3,
+            "userName": "little",
+            "userEmail": "little@gmail.com"
+        },
+        {
+            "id": 4,
+            "userId": 4,
+            "userName": "fairy",
+            "userEmail": "fairy@gmail.com"
+        },
+        {
+            "id": 5,
+            "userId": 5,
+            "userName": "lolly",
+            "userEmail": "lolly@gmail.com"
+        },
+        {
+            "id": 6,
+            "userId": 6,
+            "userName": "sparkly",
+            "userEmail": "sparkly@gmail.com"
+        },
+        {
+            "id": 7,
+            "userId": 7,
+            "userName": "glimmer",
+            "userEmail": "glimmer@gmail.com"
+        },
+        {
+            "id": 8,
+            "userId": 8,
+            "userName": "sugar",
+            "userEmail": "sugar@gmail.com"
+        },
+        {
+            "id": 9,
+            "userId": 9,
+            "userName": "blossom",
+            "userEmail": "blossom@gmail.com"
+        },
+        {
+            "id": 10,
+            "userId": 10,
+            "userName": "bubbly",
+            "userEmail": "bubbly@gmail.com"
+        },
+        {
+            "id": 11,
+            "userId": 11,
+            "userName": "cherub",
+            "userEmail": "cherub@gmail.com"
+        },
+        {
+            "id": 12,
+            "userId": 12,
+            "userName": "princess",
+            "userEmail": "princess@gmail.com"
+        }
+    ]
+}
