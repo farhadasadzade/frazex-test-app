@@ -4,15 +4,7 @@
             "id": 1,
             "userId": 1,
             "userName": "angel",
-            "userEmail": "angel@gmail.com",
-            "posts": [
-                {
-                    "id": 1,
-                    "postId": 1,
-                    "postTitle": "aaa",
-                    "postBody": "bbbbb"
-                }
-            ]
+            "userEmail": "angel@gmail.com"
         },
         {
             "id": 2,
@@ -79,6 +71,15 @@
             "userId": 12,
             "userName": "princess",
             "userEmail": "princess@gmail.com"
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "postId": 1,
+            "userId": 1,
+            "postTitle": "aaa",
+            "postBody": "bbbbb"
         }
     ]
 }
