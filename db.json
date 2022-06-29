@@ -80,6 +80,20 @@
             "userId": 1,
             "postTitle": "aaa",
             "postBody": "bbbbb"
+        },
+        {
+            "id": 2,
+            "postId": 2,
+            "userId": 1,
+            "postTitle": "aaa",
+            "postBody": "cccccc"
+        },
+        {
+            "id": 3,
+            "postId": 3,
+            "userId": 2,
+            "postTitle": "aaa",
+            "postBody": "cccccc"
         }
     ]
 }
