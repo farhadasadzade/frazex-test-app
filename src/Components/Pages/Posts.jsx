@@ -37,7 +37,7 @@ const Posts = () => {
                     <h2>Posts</h2>
                 </div>
                 {isLoaded ? 
-                    posts.map((post) => <Post key={post.psotId} {...post} />)
+                    posts.map((post) => <Post key={post.postId} {...post} />)
                     : loadingBlocks
                 }
             </div>

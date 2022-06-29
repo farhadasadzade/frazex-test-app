@@ -109,5 +109,28 @@
             "postTitle": "aaa",
             "postBody": "rrrrrr"
         }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "postId": 1,
+            "userId": 2,
+            "userName": "shimmer",
+            "commentBody": "lorem ipsum"
+        },
+        {
+            "id": 2,
+            "postId": 1,
+            "userId": 4,
+            "userName": "fairy",
+            "commentBody": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            "id": 3,
+            "postId": 2,
+            "userId": 1,
+            "userName": "angel",
+            "commentBody": "Nulla nisl ante, venenatis quis nisi eu, pellentesque sagittis mauris."
+        }
     ]
 }

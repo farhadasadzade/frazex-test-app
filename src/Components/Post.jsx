@@ -12,7 +12,7 @@ const Post = ({postTitle, postBody}) => {
         <h2>{postTitle}</h2>
         <p>{postBody}</p>
       </div>
-      {isActive && <PostPopup setActive={setActive} />}
+      {isActive && <PostPopup postTitle={postTitle} setActive={setActive} />}
     </>
   )
 }
