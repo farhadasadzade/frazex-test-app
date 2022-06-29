@@ -1,10 +1,12 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux/es/exports'
 import { fetchPosts } from '../../redux/actions/posts'
 
 import Post from '../Post'
 
 import ContentLoader from "react-content-loader"
+
+import ReactPaginate from 'react-paginate';
 
 const Posts = () => {
     const loadingBlocks = Array(10).fill(0).map((item, index) => <ContentLoader key={index}
@@ -29,6 +31,23 @@ const Posts = () => {
         dispatch(fetchPosts())
     }, [dispatch])
 
+    const [currentItems, setCurrentItems] = useState(null);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+
+  const itemsPerPage = 10;
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(posts.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(posts.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, posts]);
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % posts.length;
+    setItemOffset(newOffset);
+  };
+
   return (
     <div className='main'>
         <div className="container">
@@ -37,9 +56,23 @@ const Posts = () => {
                     <h2>Posts</h2>
                 </div>
                 {isLoaded ? 
-                    posts.map((post) => <Post key={post.postId} {...post} />)
+                    currentItems.map((post) => <Post key={post.postId} {...post} />)
                     : loadingBlocks
                 }
+                <ReactPaginate
+              breakLabel="..."
+              nextLabel="next >"
+              onPageChange={handlePageClick}
+              pageRangeDisplayed={5}
+              pageCount={pageCount}
+              previousLabel="< previous"
+              renderOnZeroPageCount={null}
+              containerClassName="pagination"
+              pageLinkClassName='page-num'
+              previousLinkClassName='page-num'
+              nextLinkClassName='page-num'
+              activeLinkClassName='active'
+            />
             </div>
         </div>
     </div>

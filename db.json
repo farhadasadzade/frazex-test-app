@@ -78,36 +78,43 @@
             "id": 1,
             "postId": 1,
             "userId": 1,
-            "postTitle": "aaa",
-            "postBody": "bbbbb"
+            "postTitle": "Nunc",
+            "postBody": "Nunc aliquet mi a odio ornare tincidunt."
         },
         {
             "id": 2,
             "postId": 2,
             "userId": 1,
-            "postTitle": "aaa",
-            "postBody": "cccccc"
+            "postTitle": "rhoncus",
+            "postBody": "Quisque rhoncus lacinia placerat."
         },
         {
             "id": 3,
             "postId": 3,
             "userId": 2,
-            "postTitle": "aaa",
-            "postBody": "cccccc"
+            "postTitle": "vitae",
+            "postBody": "Etiam vitae urna dui."
         },
         {
             "id": 4,
             "postId": 4,
             "userId": 1,
-            "postTitle": "aaa",
-            "postBody": "ddddd"
+            "postTitle": "elit",
+            "postBody": "Phasellus finibus elit vitae risus hendrerit pellentesque."
         },
         {
             "id": 5,
             "postId": 5,
             "userId": 1,
-            "postTitle": "aaa",
-            "postBody": "rrrrrr"
+            "postTitle": "sem",
+            "postBody": "Nullam eu lacus ut sem mattis semper"
+        },
+        {
+            "id": 6,
+            "postId": 6,
+            "userId": 3,
+            "postTitle": "lorem",
+            "postBody": "Quisque porta tempus eros eu venenatis. In varius sagittis ipsum, ut lacinia erat fringilla efficitur. In eu ipsum posuere, rutrum augue a, mollis dui."
         }
     ],
     "comments": [
@@ -128,6 +135,13 @@
         {
             "id": 3,
             "postId": 2,
+            "userId": 1,
+            "userName": "angel",
+            "commentBody": "Nulla nisl ante, venenatis quis nisi eu, pellentesque sagittis mauris."
+        },
+        {
+            "id": 4,
+            "postId": 4,
             "userId": 1,
             "userName": "angel",
             "commentBody": "Nulla nisl ante, venenatis quis nisi eu, pellentesque sagittis mauris."
