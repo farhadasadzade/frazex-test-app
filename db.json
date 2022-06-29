@@ -94,6 +94,20 @@
             "userId": 2,
             "postTitle": "aaa",
             "postBody": "cccccc"
+        },
+        {
+            "id": 4,
+            "postId": 4,
+            "userId": 1,
+            "postTitle": "aaa",
+            "postBody": "ddddd"
+        },
+        {
+            "id": 5,
+            "postId": 5,
+            "userId": 1,
+            "postTitle": "aaa",
+            "postBody": "rrrrrr"
         }
     ]
 }

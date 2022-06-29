@@ -157,3 +157,79 @@ body {
 	font-weight: 700;
 	font-size: 20px;
 }
+
+.popup .post {
+	pointer-events: none;
+}
+
+.popup {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	pointer-events: unset;
+}
+
+.popup__back {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: .5;
+	pointer-events: unset;
+}
+
+.popup__block {
+	background-color: #fff;
+	width: 500px;
+	height: 400px;
+	margin: 250px 0;
+	position: absolute;
+	z-index: 100;
+	left: 50%;
+	transform: translate(-50%, 0);
+	padding: 15px 20px;
+	text-align: center;
+}
+
+.popup__block svg {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.popup__content {
+	padding: 25px 0;
+	width: 100%;
+	overflow-y: auto;
+}
+
+.post {
+	width: 100%;
+	padding: 15px 25px;
+	border: 1px solid #000;
+	border-radius: 20px;
+	margin: 5px 0;
+	text-align: start;
+	cursor: pointer;
+}
+
+.loader {
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+
+}
+  
+@keyframes spin {
+	0% { transform: rotate(0deg) } 
+	100% { transform: rotate(360deg)}
+}

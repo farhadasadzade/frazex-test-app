@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux/es/exports'
-import { fetchUsers } from '../../redux/actions/users'
+import { fetchPosts } from '../../redux/actions/posts'
 
-import User from '../User'
+import Post from '../Post'
 
 import ContentLoader from "react-content-loader"
 
-
-const Users = () => {
-
+const Posts = () => {
     const loadingBlocks = Array(10).fill(0).map((item, index) => <ContentLoader key={index}
     speed={2}
     width={900}
@@ -24,11 +22,11 @@ const Users = () => {
 
     const dispatch = useDispatch()
 
-    const users = useSelector(({users}) => users.users)
-    const isLoaded = useSelector(({users}) => users.isLoaded)
+    const posts = useSelector(({posts}) => posts.posts)
+    const isLoaded = useSelector(({posts}) =>  posts.isLoaded)
 
     useEffect(() => {
-        dispatch(fetchUsers())
+        dispatch(fetchPosts())
     }, [dispatch])
 
   return (
@@ -36,10 +34,10 @@ const Users = () => {
         <div className="container">
             <div className="main__content">
                 <div className="main__about">
-                    <h2>Users</h2>
+                    <h2>Posts</h2>
                 </div>
                 {isLoaded ? 
-                    users.map((user) => <User key={user.userId} {...user} />)
+                    posts.map((post) => <Post key={post.psotId} {...post} />)
                     : loadingBlocks
                 }
             </div>
@@ -48,4 +46,4 @@ const Users = () => {
   )
 }
 
-export default Users
+export default Posts
