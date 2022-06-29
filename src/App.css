@@ -294,3 +294,21 @@ body {
 	color: #fff;
 	background-color: #5AB1BB;
 }
+
+table {
+	border: 1px solid var(--border-color);
+	border-collapse: collapse;
+}
+
+thead td {
+	font-weight: 700;
+}
+
+td {
+	border: 1px solid var(--border-color);
+	padding: 5px;
+}
+
+td:first-child {
+	width: 25px;
+}

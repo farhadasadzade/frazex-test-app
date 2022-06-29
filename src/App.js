@@ -7,6 +7,7 @@ import Users from './Components/Pages/Users';
 import Posts from './Components/Pages/Posts';
 import Home from './Components/Pages/Home';
 import { useState } from 'react';
+import Comments from './Components/Pages/Comments';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/users' element={<Users />} />
         <Route path='/posts' element={<Posts />} />
+        <Route path='/comments' element={<Comments />} />
       </Routes>
     </div>
   );

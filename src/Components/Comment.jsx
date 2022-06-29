@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Comment = ({userName, commentBody}) => {
+const Comment = ({userName, commentBody, id}) => {
   return (
-    <div className='post'>
-        <h2>User: {userName}</h2>
-        <p>{commentBody}</p>
-    </div>
+    <tr>
+        <td>{id}</td>
+        <td>{userName}</td>
+        <td>{commentBody}</td>
+    </tr>
   )
 }
 

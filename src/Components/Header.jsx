@@ -16,6 +16,7 @@ const Header = ({theme, setTheme}) => {
                 <div className="header__nav">
                     <Link to='/users'>Users</Link>
                     <Link to='/posts'>Posts</Link>
+                    <Link to='/comments'>Comments</Link>
                 </div>
                 <div className="header__dark">
                     Light

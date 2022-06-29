@@ -8,10 +8,11 @@ const Post = ({postTitle, postBody, postId}) => {
 
   return (
     <>
-      <div className='post' onClick={() => setActive(true)}>
-        <h2>{postTitle}</h2>
-        <p>{postBody}</p>
-      </div>
+      <tr>
+        <td onClick={() => setActive(true)}>{postId}</td>
+        <td>{postTitle}</td>
+        <td>{postBody}</td>
+      </tr>
       {isActive && <PostPopup postId={postId} postTitle={postTitle} setActive={setActive} />}
     </>
   )

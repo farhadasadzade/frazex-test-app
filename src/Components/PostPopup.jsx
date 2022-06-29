@@ -26,9 +26,22 @@ const PostPopup = ({setActive, postTitle, postId}) => {
             <FontAwesomeIcon icon={faXmark} onClick={() => setActive(false)} />
             <h2>{postTitle}'s comments</h2>
             <div className="popup__content">
-              {!isLoaded ? <div className="loader"></div> : 
-                postComments?.length > 0 ? postComments.map((comment) => <Comment key={comment.id} {...comment} />) : <p>This post dont have comment yet.</p>
-              }
+                {!isLoaded ? <div className="loader"></div> : 
+                  postComments?.length > 0 ? 
+                        <table>
+                          <thead>
+                            <tr>
+                              <td>PostId</td>
+                              <td>PostTitle</td>
+                              <td>PostBody</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {postComments?.map((comment) => <Comment key={comment.id} {...comment} />)}
+                          </tbody>
+                        </table> 
+                    : <p>This post dont have comment yet.</p>
+                }
             </div>
         </div>
     </div>

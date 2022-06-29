@@ -29,9 +29,26 @@ const UserPopup = ({setActive, userName, userId}) => {
             <FontAwesomeIcon icon={faXmark} onClick={() => setActive(false)} />
             <h2>{userName}'s posts</h2>
             <div className="popup__content">
-              {!isLoaded ? <div className="loader"></div> : 
-                userPosts?.length > 0 ? userPosts.map((post) => <Post key={post.postId} {...post} />) : <p>This user dont have post yet.</p>
-              }
+                  {!isLoaded ? <div className="loader"></div> : 
+                    userPosts?.length > 0 ? 
+                        <table>
+                          <thead>
+                            <tr>
+                              <td>PostId</td>
+                              <td>PostTitle</td>
+                              <td>PostBody</td>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {
+                              userPosts.map((post) => {
+                                return <Post key={post.postId} {...post} />
+                              })
+                            }
+                          </tbody>
+                        </table>
+                        : <p>This user dont have post yet.</p>
+                  }
             </div>
         </div>
     </div>

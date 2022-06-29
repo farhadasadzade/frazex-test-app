@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux/es/exports'
-import { fetchUsers } from '../../redux/actions/users'
-
 import ReactPaginate from 'react-paginate';
 
-import User from '../User';
+import { fetchComments } from '../../redux/actions/comments'
 
+import Comment from '../Comment'
 
-const Users = () => {
+const Comments = () => {
 
     const dispatch = useDispatch()
 
-    const users = useSelector(({users}) => users.users)
+    const comments = useSelector(({comments}) => comments.comments)
 
     useEffect(() => {
-        dispatch(fetchUsers())
+        dispatch(fetchComments())
     }, [dispatch])
 
   
@@ -26,12 +25,12 @@ const Users = () => {
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(users.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(users.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, users]);
+    setCurrentItems(comments.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(comments.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, comments]);
 
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % users.length;
+    const newOffset = (event.selected * itemsPerPage) % comments.length;
     setItemOffset(newOffset);
   };
 
@@ -40,19 +39,19 @@ const Users = () => {
         <div className="container">
             <div className="main__content">
                 <div className="main__about">
-                    <h2>Users</h2>
+                    <h2>Comments</h2>
                 </div>
                 <table>
                   <thead>
                     <tr>
-                      <td>UserId</td>
+                      <td>CommentId</td>
                       <td>UserName</td>
-                      <td>UserEmail</td>
+                      <td>CommentBody</td>
                     </tr>
                   </thead>
                   <tbody>
                   { 
-                    currentItems?.map((user) => <User key={user.userId}  {...user}/> )
+                    currentItems?.map((comment) => <Comment key={comment.id}  {...comment}/> )
                   }
                   </tbody>
                 </table>
@@ -76,4 +75,4 @@ const Users = () => {
   )
 }
 
-export default Users
+export default Comments
