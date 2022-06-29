@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
-const PostPopup = ({setActive, postTitle}) => {
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchPostComments } from '../redux/actions/posts';
+
+import Comment from './Comment';
+
+const PostPopup = ({setActive, postTitle, postId}) => {
+
+  const dispatch = useDispatch()
+
+  const isLoaded = useSelector(({posts}) => posts.isPostLoaded)
+  const postComments = useSelector(({posts}) => posts.postComments)
+
+  useEffect(() => {
+    dispatch(fetchPostComments(postId))
+  }, [dispatch, postId])
+
   return (
     <div className='popup'>
         <div className="popup__back"></div>
@@ -11,7 +26,9 @@ const PostPopup = ({setActive, postTitle}) => {
             <FontAwesomeIcon icon={faXmark} onClick={() => setActive(false)} />
             <h2>{postTitle}'s comments</h2>
             <div className="popup__content">
-              
+              {!isLoaded ? <div className="loader"></div> : 
+                postComments?.length > 0 ? postComments.map((comment) => <Comment key={comment.id} {...comment} />) : <p>This post dont have comment yet.</p>
+              }
             </div>
         </div>
     </div>

@@ -26,3 +26,11 @@ const setPostComments = (posts) => ({
     type: 'SET_POST_COMMENTS',
     payload: posts
 })
+
+export const fetchPostComments = (postId) => (dispatch) => {
+    dispatch(setPostLoaded(false))
+    axios.get(`https://my-json-server.typicode.com/farhadasadzade/frazex-test-app/posts/${postId}/comments`)
+        .then(({data}) => {
+            dispatch(setPostComments(data))
+        })
+}

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import PostPopup from './PostPopup'
 
-const Post = ({postTitle, postBody}) => {
+const Post = ({postTitle, postBody, postId}) => {
 
   const [isActive, setActive] = useState(false)
 
@@ -12,7 +12,7 @@ const Post = ({postTitle, postBody}) => {
         <h2>{postTitle}</h2>
         <p>{postBody}</p>
       </div>
-      {isActive && <PostPopup postTitle={postTitle} setActive={setActive} />}
+      {isActive && <PostPopup postId={postId} postTitle={postTitle} setActive={setActive} />}
     </>
   )
 }

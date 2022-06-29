@@ -19,6 +19,11 @@ const postsReducer = (state = initialState, action) => {
                 ...state,
                 isLoaded: action.payload
             }
+        case 'SET_POST_LOADED':
+            return {
+                ...state,
+                isPostLoaded: action.payload
+            }
         case 'SET_POST_COMMENTS':
             return {
                 ...state,

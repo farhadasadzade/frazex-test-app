@@ -1,12 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import { Switch } from '@mui/material'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({theme, setTheme}) => {
 
     const handleChange = () => {
-        
+        setTheme(!theme)
     }
 
   return (
